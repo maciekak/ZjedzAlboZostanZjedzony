@@ -6,7 +6,30 @@
         xmlns:local="clr-namespace:ZjedzAlboZostanZjedzony"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate x:Key="InitialViewTemplate" DataType="{x:Type local:MainViewModel}">
+            <local:InitialView/>
+        </DataTemplate>
+        <DataTemplate x:Key="SimulationViewTemplate" DataType="{x:Type local:MainViewModel}">
+            <local:SimulationView/>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        
+        <ContentControl Content="{Binding}">
+            <ContentControl.Style>
+                <Style TargetType="{x:Type ContentControl}">
+                    <Setter Property="ContentTemplate" Value="{StaticResource InitialViewTemplate}"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ViewState}" Value="SimulationView">
+                            <Setter Property="ContentTemplate" Value="{StaticResource SimulationViewTemplate}"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ContentControl.Style>
+        </ContentControl>
     </Grid>
 </Window>
