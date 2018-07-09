@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -17,6 +18,8 @@ namespace ZjedzAlboZostanZjedzony
         private int _seekingRadius = 6;
         private int _addingNumberFrequencyLevel = 3;
         private ViewState _viewState;
+
+        public ObservableCollection<>
 
         public ViewState ViewState
         {

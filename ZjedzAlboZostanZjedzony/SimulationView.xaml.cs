@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -61,11 +62,13 @@ namespace ZjedzAlboZostanZjedzony
                 {
                     var cellText = new TextBlock
                     {
-                        Text = "0",
                         TextAlignment = TextAlignment.Center,
                         HorizontalAlignment = HorizontalAlignment.Stretch,
                         VerticalAlignment = VerticalAlignment.Stretch
                     };
+                    //var cellBinding = new Binding(_mainViewModel.);
+                    //cellText.SetBinding(TextBlock.TextProperty, )
+
                     var cell = new Frame
                     {
                         BorderThickness = new Thickness(0.5),
