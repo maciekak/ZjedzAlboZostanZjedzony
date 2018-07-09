@@ -69,6 +69,7 @@ namespace ZjedzAlboZostanZjedzony
                     //var cellBinding = new Binding(_mainViewModel.);
                     //cellText.SetBinding(TextBlock.TextProperty, )
                     //jkljkllll
+                    //jkljkl
                     var cell = new Frame
                     {
                         BorderThickness = new Thickness(0.5),
